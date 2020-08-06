@@ -1,11 +1,13 @@
 body, p{
     margin: 0; 
     padding: 0; 
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 
 img{
     width: 100%;
+    display: block;
 }
 
 
@@ -97,3 +99,77 @@ nav ul, nav li{
     justify-content: center;
 }
 
+
+/* mobil main content  */
+#resturantDescriptionContainer{
+    background-color: #131542;
+    color: white;
+    margin: 0;
+}
+.mainContentHeader{
+    text-align: center;
+}
+.mainContentHeader p, h1{
+    padding: 0;
+    margin: 0;
+}
+
+.mainContentHeader h1{
+    padding-top: 1em;
+}
+.mainContentHeader p{
+    padding-bottom: 1em;
+}
+
+#mainContentText{
+    display: flex;
+    word-wrap: normal;
+    padding: 1em;
+    justify-content: center;
+    line-height: 1.5em;
+    color: lightgray;
+}
+
+
+/* email sign up  */
+#emailSignUpContainer{
+    padding: 1em;
+    background-color: #0a0b27;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#emailSignUpContainer h2, #emailSignUpContainer p{
+    margin: 0;
+    padding: 0;
+}
+
+#emailSignUpContainer h2{
+    text-align: center;
+    font-size: 1.3em;
+}
+
+
+#emailSignUpContainer p{
+    text-align: center;
+    margin-bottom: 1.5em;
+}
+
+
+#emailSignUpContainer input{
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+}
+
+
+#emailSignUpContainer button{
+    padding: 0.5em;
+    border-radius: 5px;
+    border: none;
+    background-color: #ffcf1e;
+    color: #081E3F;
+
+}
