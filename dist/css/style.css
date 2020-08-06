@@ -1,4 +1,99 @@
-body{
+body, p{
     margin: 0; 
     padding: 0; 
 }
+
+
+img{
+    width: 100%;
+}
+
+
+nav ul, nav li{
+    list-style-type: none;
+    padding: none;
+    margin: none;
+}
+
+
+/* mobile nav bar */
+
+#desktopMainNavigation
+{
+    display: none;
+}
+
+
+#navigationContentContainer{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000024;
+    height: 50px;
+    color: white;
+}
+
+#mobileHamburger div{
+    background-color: white;
+    height: 2px;
+    width: 30px;
+    margin-bottom: 0.3em;
+    margin-top: 0.5em;
+}
+
+#mobileHamburger
+{
+    margin-right: 1em;
+}
+
+#logoContainer{
+    font-size: 2em;
+    margin-left: 0.5em;
+}
+
+
+
+
+
+/* mobile nav menu drop down  */
+.mobileNavContainer{
+    position: absolute;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 200px;
+    padding-top: 1em;
+    background-color: #000024;
+    color: white;
+    overflow: hidden;
+
+    width: 0;
+}
+
+.mobileNavContainer p{
+    margin: 0;
+    font-size: 1.3em;
+    margin-left: 1em;
+}
+
+#mobileMainNavigation div ul{
+    margin: 0;
+    padding: 0;
+    width: 70px;
+}
+
+#mobileMainNavigation div li{
+   font-size: 1.3em;
+   margin-top: 1em;
+
+}
+
+#mobileMainNavigation div li:last-child{
+    margin-bottom: 1em;
+ }
+
+#mobileMainNavigation div{
+    display: flex;
+    justify-content: center;
+}
+
