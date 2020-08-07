@@ -134,6 +134,7 @@ nav ul, nav li{
 /* email sign up  */
 #emailSignUpContainer{
     padding: 1em;
+    padding-top: 3em;
     background-color: #0a0b27;
     color: white;
     display: flex;
@@ -171,5 +172,116 @@ nav ul, nav li{
     border: none;
     background-color: #ffcf1e;
     color: #081E3F;
+
+}
+
+
+@media only screen and (min-width: 800px)
+{
+
+    #headerContentContainer{
+        display: flex;
+        background-color: #000026;
+        justify-content: center;
+    }
+    #headerContentContainer img{
+        max-width: 1000px;
+        height: 530px;
+    }
+
+    #navigationContentContainer{
+        padding-top: 2em;
+    }
+    .mobileNavContent
+    {
+        display: none;
+    }
+
+    #desktopMainNavigation
+    {
+
+        display: block;
+    }
+
+    #desktopMainNavigation ul{
+        display: flex
+    }
+
+    #desktopMainNavigation li{
+        margin-right: 1em;
+        font-size: 1.3em;
+    }
+
+    #desktopMainNavigation li:hover{
+        color: #e43636;
+    }
+
+
+
+
+
+
+   .mainContentContainer{
+       margin-top: 3em;
+       display: grid;
+       grid-template-columns: repeat(2, 1fr);
+
+   }
+
+   #mainContentText{
+       max-width: 500px;
+   }
+
+   #insideArcade{
+       max-width: 400px;
+   }
+
+   .mainContentImageContainer{
+       display: flex;
+       justify-content: center;
+   }
+
+   #resturantDescriptionContainer{
+       padding-bottom: 5em;
+   }
+
+    .mainContentHeader h1{
+        font-size: 2.3em;
+    }
+    .mainContentHeader p{
+        font-size: 1.2em;
+    }
+
+
+    #emailSignUpContainer h2{
+        font-size: 1.7em;
+    }
+    #emailSignUpContainer p{
+        font-size: 1.1em;
+    }
+
+
+    #emailSignUpContainer input{
+        font-size: 1.2em;
+        width: 250px;
+        height: 30px;
+        margin: none;
+    }
+    
+    #emailSignUpContainer{
+        padding-bottom: 5em;
+    }
+
+    #emailSignUpContainer button{
+        width: 100px;
+        height: 47px;
+        font-size: 1.1em;
+        margin: none;
+
+    }
+
+    
+
+
 
 }
