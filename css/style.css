@@ -131,6 +131,7 @@ nav ul, nav li{
 }
 
 
+
 /* email sign up  */
 #emailSignUpContainer{
     padding: 1em;
@@ -176,21 +177,28 @@ nav ul, nav li{
 }
 
 
-@media only screen and (min-width: 800px)
+@media only screen and (min-width: 900px)
 {
 
+    .container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #031b2b;
+    }
     #headerContentContainer{
         display: flex;
         background-color: #000026;
         justify-content: center;
     }
     #headerContentContainer img{
-        max-width: 1000px;
-        height: 530px;
+        max-width: 900px;
     }
+
 
     #navigationContentContainer{
         padding-top: 2em;
+        width: 900px;
     }
     .mobileNavContent
     {
@@ -217,10 +225,6 @@ nav ul, nav li{
     }
 
 
-
-
-
-
    .mainContentContainer{
        margin-top: 3em;
        display: grid;
@@ -234,6 +238,7 @@ nav ul, nav li{
 
    #insideArcade{
        max-width: 400px;
+       box-shadow: 0 0 2px;
    }
 
    .mainContentImageContainer{
@@ -242,6 +247,7 @@ nav ul, nav li{
    }
 
    #resturantDescriptionContainer{
+       width: 900px;
        padding-bottom: 5em;
    }
 
@@ -269,6 +275,8 @@ nav ul, nav li{
     }
     
     #emailSignUpContainer{
+        box-sizing: border-box;
+        width: 900px;
         padding-bottom: 5em;
     }
 
