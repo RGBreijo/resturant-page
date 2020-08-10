@@ -1,12 +1,28 @@
 
-import {navigationBar, pageHeader} from './mainPage.js';
+import {navigationBar, pageHeader, mainPageContent} from './mainPage.js';
 
+
+
+let indexContainer = document.querySelector(".container");
+
+// NAVIGATION BAR 
+indexContainer.appendChild(navigationBar());
 document.querySelector("#mobileHamburger").addEventListener('click', OpenMobileNavBarAnimation);
 
 
+// INDEX MAIN IMAGE
+indexContainer.appendChild(pageHeader("pizzaPlanetPhotos/outsidePizzaPlanet.jpg"));
 
-console.log(navigationBar());
-console.log(pageHeader("source"));
+
+// MAIN CONTENT 
+
+indexContainer.appendChild(mainPageContent("pizzaPlanetPhotos/pizzaPlanetGames.jpg"));
+
+
+
+console.log(mainPageContent()); 
+
+
 
 
 
