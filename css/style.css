@@ -177,7 +177,39 @@ nav ul, nav li{
 }
 
 
-@media only screen and (min-width: 900px)
+@media only screen and (min-width: 500px)
+{
+    #emailSignUpContainer h2{
+        font-size: 1.5em;
+    }
+    #emailSignUpContainer p{
+        font-size: 1em;
+    }
+
+
+    #emailSignUpContainer input{
+        font-size: 1.2em;
+        width: 200px;
+        height: 20px;
+        margin: none;
+    }
+    
+    #emailSignUpContainer{
+        box-sizing: border-box;
+        width: 100%;
+        padding-bottom: 5em;
+    }
+
+    #emailSignUpContainer button{
+        width: 100px;
+        height: 40px;
+        font-size: 1.1em;
+        margin: none;
+
+    }
+}
+
+@media only screen and (min-width: 700px)
 {
 
     .container{
@@ -198,7 +230,7 @@ nav ul, nav li{
 
     #navigationContentContainer{
         padding-top: 2em;
-        width: 900px;
+        width: 100%;
     }
     .mobileNavContent
     {
@@ -237,7 +269,7 @@ nav ul, nav li{
    }
 
    #insideArcade{
-       max-width: 400px;
+       max-width: 340px;
        box-shadow: 0 0 2px;
    }
 
@@ -247,7 +279,7 @@ nav ul, nav li{
    }
 
    #resturantDescriptionContainer{
-       width: 900px;
+
        padding-bottom: 5em;
    }
 
@@ -258,38 +290,28 @@ nav ul, nav li{
         font-size: 1.2em;
     }
 
-
-    #emailSignUpContainer h2{
-        font-size: 1.7em;
-    }
-    #emailSignUpContainer p{
-        font-size: 1.1em;
-    }
+}
 
 
-    #emailSignUpContainer input{
-        font-size: 1.2em;
-        width: 250px;
-        height: 30px;
-        margin: none;
+
+@media only screen and (min-width: 900px)
+{
+
+    #insideArcade{
+        max-width: 400px;
     }
+
     
-    #emailSignUpContainer{
-        box-sizing: border-box;
+    #navigationContentContainer{
         width: 900px;
-        padding-bottom: 5em;
     }
 
-    #emailSignUpContainer button{
-        width: 100px;
-        height: 47px;
-        font-size: 1.1em;
-        margin: none;
-
+    #resturantDescriptionContainer{
+        width: 900px;
     }
 
-    
-
-
-
+    #emailSignUpContainer{
+        width: 900px;
+    }
+ 
 }
