@@ -1,7 +1,8 @@
 
 import {navigationBar, pageHeader, mainPageContent, emailSection} from './mainPage.js';
+import {menuContent} from './menu.js';
 
-
+menuContent(); 
 
 let indexContainer = document.querySelector(".content");
 
@@ -22,7 +23,6 @@ indexContainer.appendChild(mainPageContent("pizzaPlanetPhotos/pizzaPlanetGames.j
 // EMAIL SECTION 
 indexContainer.appendChild(emailSection());
 
-console.log(emailSection()); 
 
 
 
