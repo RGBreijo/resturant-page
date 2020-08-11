@@ -1,9 +1,9 @@
 
-import {navigationBar, pageHeader, mainPageContent} from './mainPage.js';
+import {navigationBar, pageHeader, mainPageContent, emailSection} from './mainPage.js';
 
 
 
-let indexContainer = document.querySelector(".container");
+let indexContainer = document.querySelector(".content");
 
 // NAVIGATION BAR 
 indexContainer.appendChild(navigationBar());
@@ -19,8 +19,11 @@ indexContainer.appendChild(pageHeader("pizzaPlanetPhotos/outsidePizzaPlanet.jpg"
 indexContainer.appendChild(mainPageContent("pizzaPlanetPhotos/pizzaPlanetGames.jpg"));
 
 
+// EMAIL SECTION 
+indexContainer.appendChild(emailSection());
 
-console.log(mainPageContent()); 
+console.log(emailSection()); 
+
 
 
 

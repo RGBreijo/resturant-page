@@ -177,12 +177,53 @@ function mainPageContent(insideArcadeSrc)
 }
 
 
+ function emailSection()
+ {
+     let emailSignUpContainer = document.createElement("div"); 
+     emailSignUpContainer.setAttribute("id", "emailSignUpContainer");
+
+     let mainSection = document.createElement("SECTION"); 
+
+     emailSignUpContainer.appendChild(mainSection); 
+
+    let sectionDiv = document.createElement("div"); 
+    mainSection.appendChild(sectionDiv);
+
+    let sectionDivH2 = document.createElement("h2"); 
+    sectionDivH2.textContent = "Sign Up For 10 Free Tokens!";
+    sectionDiv.appendChild(sectionDivH2); 
+
+    let sectionDivP = document.createElement("p"); 
+    sectionDivP.textContent = "Sign up to our news letter";
+    sectionDiv.appendChild(sectionDivP); 
 
 
+    //// 
+
+    let emailSectionForm =  document.createElement("form"); 
+    emailSignUpContainer.appendChild(emailSectionForm); 
 
 
+    let emailSectionFormLabel =  document.createElement("label"); 
+    // label attributes
+    emailSectionForm.appendChild(emailSectionFormLabel);
+
+    let emailSectionFormInput =  document.createElement("input"); 
+    emailSectionFormInput.setAttribute("type", "email");
+    emailSectionFormInput.setAttribute("placeholder", "example@email.com");
+    emailSectionFormInput.required = true; 
+
+    emailSectionForm.appendChild(emailSectionFormInput);
+
+    let emailSectionFormButton =  document.createElement("button"); 
+    emailSectionFormButton.textContent = "Sign Up"; 
+    // button text content 
+    emailSectionForm.appendChild(emailSectionFormButton);
+
+    return emailSignUpContainer; 
+ }
 
 export 
 {
-    navigationBar, pageHeader, mainPageContent
+    navigationBar, pageHeader, mainPageContent, emailSection
 };
