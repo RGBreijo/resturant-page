@@ -101,7 +101,7 @@ nav ul, nav li{
 
 
 /* mobil main content  */
-#resturantDescriptionContainer{
+#resturantDescriptionContainer,  #resturantMenuContainer{
     background-color: #131542;
     color: white;
     margin: 0;
@@ -177,6 +177,30 @@ nav ul, nav li{
 }
 
 
+/* Menu section  */
+
+.mainMenuContentContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.mainMenuContentContainer div{
+    margin-bottom: 1em;
+}
+.menuItem{
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.mainContentHeader h1{
+    margin-bottom: 1em;
+    font-size: 1.8em;
+}
+
+
+
+
 @media only screen and (min-width: 500px)
 {
     #emailSignUpContainer h2{
@@ -212,12 +236,22 @@ nav ul, nav li{
 @media only screen and (min-width: 700px)
 {
 
-    .content{
+    .content, #navbarContainer{
         display: flex;
         flex-direction: column;
         align-items: center;
         background-color: #031b2b;
     }
+
+    
+
+    #navigationContentContainer{
+        display: flex;
+    }
+
+
+
+
     #headerContentContainer{
         display: flex;
         background-color: #000026;
@@ -278,7 +312,7 @@ nav ul, nav li{
        justify-content: center;
    }
 
-   #resturantDescriptionContainer{
+   #resturantDescriptionContainer, #resturantMenuContainer{
 
        padding-bottom: 5em;
    }
@@ -290,6 +324,10 @@ nav ul, nav li{
         font-size: 1.2em;
     }
 
+
+    #resturantMenuContainer{
+        width: 100%;
+    }
 }
 
 
@@ -306,11 +344,13 @@ nav ul, nav li{
         width: 900px;
     }
 
-    #resturantDescriptionContainer{
+    #resturantDescriptionContainer, #resturantMenuContainer{
         width: 900px;
     }
 
-    #emailSignUpContainer{
+
+    #resturantMenuContainer
+    {
         width: 900px;
     }
  
