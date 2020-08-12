@@ -1,7 +1,31 @@
-// import {navigationBar} from './mainPage.js';
 
 
+/**
+ * Renders the elements for the menu page
+ */
 
+function renderMenuPage()
+{
+    const CONTENT = document.querySelector(".content");
+
+    // Clears previous content
+    while(CONTENT.lastChild)
+    {
+        CONTENT.lastChild.remove();
+    }
+
+    // adds menu
+    CONTENT.appendChild(menuContent());
+}
+
+
+/**
+ * 
+ * Creates the elements for one item for sale
+ * 
+ * @param {*} item Name of the item for sale
+ * @param {*} itemPrice price of the item 
+ */
 function menuItemCreator(item, itemPrice)
 {
     let menuItemContainer = document.createElement("div"); 
@@ -20,11 +44,14 @@ function menuItemCreator(item, itemPrice)
 }
 
 
-
+/**
+ * 
+ * Populate the menu with different items for sale 
+ * 
+ */
 
 function menuContent()
 {
-    const  MENU_ITEM_AMOUNT = 8; 
 
     let MenuItemAndPrice = 
     {
@@ -41,9 +68,6 @@ function menuContent()
 
     let resturantMenuContainer = document.createElement("div"); 
     resturantMenuContainer.setAttribute("id", "resturantMenuContainer");
-
-
-
 
     let resturantMenuContainerSection = document.createElement("SECTION"); 
     resturantMenuContainer.appendChild(resturantMenuContainerSection); 
@@ -78,4 +102,4 @@ function menuContent()
 
 
 
-export {menuItemCreator, menuContent};
+export {renderMenuPage};
