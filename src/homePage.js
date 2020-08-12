@@ -1,108 +1,41 @@
 
 
 
-function navigationBar()
-{   
 
-    // Contains all the navbar elements 
-    let navigationContainer = document.createElement("div");
-    navigationContainer.setAttribute("id", "navigationContentContainer")
-
-
-    // First child of navbar 
-    let logoContainer = document.createElement("div");
-    logoContainer.setAttribute("id", "logoContainer")
-
-    let logoContainerP = document.createElement("p");
-    logoContainerP.textContent = "Pizza Planet"; 
-
-    logoContainer.appendChild(logoContainerP);
-
-    // Second child of navbar 
-
-    let mobileNavContent = document.createElement("div");
-    mobileNavContent.setAttribute("class", "mobileNavContent");
-
-    // First Child of mobileNavContent
-    let mobileHamburger = document.createElement("div");
-    mobileHamburger.setAttribute("id", "mobileHamburger");
-
-    mobileHamburger.appendChild(document.createElement("div"));
-    mobileHamburger.appendChild(document.createElement("div"));
-    mobileHamburger.appendChild(document.createElement("div"));
-
-    // Second child of mobileNavContent
-    let mobileNavContainer = document.createElement("div");
-    mobileNavContainer.setAttribute("class", "mobileNavContainer");
-
-    // Exit button of mobileNavContainer
-    let mobileNavContainerExit = mobileNavContainer.appendChild(document.createElement("div"));
-    let mobileNavContainerExitP = document.createElement("p"); 
-    mobileNavContainerExitP.textContent = "X";
-    mobileNavContainerExitP.setAttribute("id", "closeMobileNav");
-
-    mobileNavContainerExit.appendChild(mobileNavContainerExitP);
+/**
+ * Renders the elements for the home page 
+ */
+function renderHomePage()
+{
+    const CONTENT = document.querySelector(".content");
+ 
+    while(CONTENT.lastChild)  // Remove the elements currently on the page 
+    {
+        CONTENT.lastChild.remove();
+    }
+    // INDEX MAIN IMAGE
+    CONTENT.appendChild(createMainImage("pizzaPlanetPhotos/outsidePizzaPlanet.jpg"));
 
 
+    // MAIN CONTENT 
+    CONTENT.appendChild(mainPageContent("pizzaPlanetPhotos/pizzaPlanetGames.jpg"));
 
-
-    // second child of mobileNavContainer  
-    let mobileMainNavigation = document.createElement("nav"); 
-    mobileMainNavigation.setAttribute("id", "mobileMainNavigation");
-
-
-    let mobileMainNavigationOuterDiv = mobileMainNavigation.appendChild(document.createElement("div"));
-    
-    let mobileMainNavigationUL = document.createElement("ul");
-    mobileMainNavigationOuterDiv.appendChild(mobileMainNavigationUL);
-
-
-
-    let mobileLinkOne = mobileMainNavigationUL.appendChild(document.createElement("li"));
-    mobileLinkOne.textContent = "Home"; 
-    
-    let mobileLinkTwo = mobileMainNavigationUL.appendChild(document.createElement("li"));
-    mobileLinkTwo.textContent = "Menu"; 
-
-    let mobileLinkThree = mobileMainNavigationUL.appendChild(document.createElement("li"));
-    mobileLinkThree.textContent = "Contact"; 
-
-    mobileNavContainer.appendChild(mobileMainNavigation);
-
-    mobileNavContent.appendChild(mobileHamburger);
-    mobileNavContent.appendChild(mobileNavContainer);
-
-
-    // Thrid child of navigationContainer (navigationContentContainer)
-
-    let desktopMainNavigation = document.createElement("nav");
-    desktopMainNavigation.setAttribute("id", "desktopMainNavigation");
-
-    let desktopMainNavigationUl = document.createElement("ul");
-
-    desktopMainNavigation.appendChild(desktopMainNavigationUl);
-
-    let DesktopLinkOne = desktopMainNavigationUl.appendChild(document.createElement("li"));
-    DesktopLinkOne.textContent = "Home"; 
-    
-    let DesktopLinkTwo = desktopMainNavigationUl.appendChild(document.createElement("li"));
-    DesktopLinkTwo.textContent = "Menu"; 
-
-    let DesktopLinkThree = desktopMainNavigationUl.appendChild(document.createElement("li"));
-    DesktopLinkThree.textContent = "Contact"; 
-
-
-
-    navigationContainer.appendChild(logoContainer);
-    navigationContainer.appendChild(mobileNavContent);
-    navigationContainer.appendChild(desktopMainNavigation);
-
-    return navigationContainer;
+    // EMAIL SECTION 
+    CONTENT.appendChild(emailSection());
 }
 
-
-
-function pageHeader(source)
+/**
+ * 
+ * Creates the elements that hold the main image of the home page
+ * 
+ * Main Elements Used: 
+ * Img - Image of the resturant 
+ * 
+ * All other elements are for styling purposes 
+ * 
+ * @param {*} source source to where the main page image is located 
+ */
+function createMainImage(source)
 {
     let headerContentContainer = document.createElement("div");
     let headerImg = headerContentContainer.appendChild(document.createElement("HEADER").appendChild(document.createElement("img")))
@@ -114,7 +47,23 @@ function pageHeader(source)
 }
 
 
-function mainPageContent(insideArcadeSrc)
+/**
+ * 
+ * Creates the elements for the main content of the home page. 
+ * 
+ * Main Elements Used: 
+ * 
+ * H1 - Name of resturant 
+ * P - Slogan 
+ * 
+ * Img - Image of the resturant 
+ * P - Information about the resturant
+ *    
+ * 
+ * All other elements are for styling purposes 
+ * @param {*} source 
+ */
+function mainPageContent(source)
 {
     let resturantDescriptionContainer = document.createElement("div");
     resturantDescriptionContainer.setAttribute("id", "resturantDescriptionContainer");
@@ -141,7 +90,6 @@ function mainPageContent(insideArcadeSrc)
     sectionContainer.appendChild(mainContentHeader);
 
     // second child 
-
     let mainContentContainer = document.createElement("div"); 
     mainContentContainer.setAttribute("class", "mainContentContainer");
     sectionContainer.appendChild(mainContentContainer); 
@@ -151,16 +99,14 @@ function mainPageContent(insideArcadeSrc)
 
     let insideArcade = document.createElement("img"); 
     insideArcade.setAttribute("id", "insideArcade");
-    insideArcade.setAttribute("src", insideArcadeSrc); 
+    insideArcade.setAttribute("src", source); 
 
     mainContentImageContainer.appendChild(insideArcade); 
 
     mainContentContainer.appendChild(mainContentImageContainer);
 
 
-
     // third chidl 
-
     let mainContentText = document.createElement("div"); 
     mainContentText.setAttribute("id", "mainContentText");
 
@@ -177,6 +123,18 @@ function mainPageContent(insideArcadeSrc)
 }
 
 
+/**
+ * 
+ * Creates the elements for an email sign up form 
+ * 
+ * 
+ * Main Elements Used: 
+ * 
+ * label  - Label of email ( Not implemented, no textContent )
+ * input  - Customer Email address  
+ * button - Sign Up Button 
+ * 
+ */
  function emailSection()
  {
      let emailSignUpContainer = document.createElement("div"); 
@@ -198,14 +156,11 @@ function mainPageContent(insideArcadeSrc)
     sectionDiv.appendChild(sectionDivP); 
 
 
-    //// 
-
     let emailSectionForm =  document.createElement("form"); 
     emailSignUpContainer.appendChild(emailSectionForm); 
 
 
     let emailSectionFormLabel =  document.createElement("label"); 
-    // label attributes
     emailSectionForm.appendChild(emailSectionFormLabel);
 
     let emailSectionFormInput =  document.createElement("input"); 
@@ -217,13 +172,12 @@ function mainPageContent(insideArcadeSrc)
 
     let emailSectionFormButton =  document.createElement("button"); 
     emailSectionFormButton.textContent = "Sign Up"; 
-    // button text content 
+
+
     emailSectionForm.appendChild(emailSectionFormButton);
 
     return emailSignUpContainer; 
  }
 
-export 
-{
-    navigationBar, pageHeader, mainPageContent, emailSection
-};
+
+export {renderHomePage};
