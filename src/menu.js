@@ -1,3 +1,5 @@
+import {emailSection} from './homePage.js'
+
 
 
 /**
@@ -16,6 +18,7 @@ function renderMenuPage()
 
     // adds menu
     CONTENT.appendChild(menuContent());
+    CONTENT.appendChild(emailSection());
 }
 
 
