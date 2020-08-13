@@ -13,7 +13,6 @@ function renderNavigationbar()
     const NAVBAR_CONTAINER = document.querySelector("#navbarContainer");
     NAVBAR_CONTAINER.appendChild(navigationBar()); 
 
-    // BODY.insertBefore(navigationBar(), CONTAINER);   
     document.querySelector("#mobileHamburger").addEventListener('click', OpenMobileNavBarAnimation);
     navigationBarEventListeners();
 }
@@ -26,6 +25,7 @@ function navigationBarEventListeners()
 {
     let home = Array.from(document.querySelectorAll(".homePage")); 
     let menu = Array.from(document.querySelectorAll(".menuPage")); 
+
 
     for(let i = 0; i < home.length; i++)
     {
@@ -104,14 +104,17 @@ function navigationBar()
     let mobileLinkOne = mobileMainNavigationUL.appendChild(document.createElement("li"));
     mobileLinkOne.textContent = "Home"; 
     mobileLinkOne.setAttribute("class", "homePage");
+
+
     
     let mobileLinkTwo = mobileMainNavigationUL.appendChild(document.createElement("li"));
     mobileLinkTwo.textContent = "Menu"; 
     mobileLinkTwo.setAttribute("class", "menuPage");
 
+
     let mobileLinkThree = mobileMainNavigationUL.appendChild(document.createElement("li"));
     mobileLinkThree.textContent = "Contact"; 
-    mobileLinkTwo.setAttribute("class", "contactPage"); 
+    mobileLinkThree.setAttribute("class", "contactPage"); 
 
     mobileNavContainer.appendChild(mobileMainNavigation);
 
