@@ -21,6 +21,7 @@ function renderContactPage()
     CONTENT.appendChild(mainPageContent("pizzaPlanetPhotos/pizzaPlanet.png"));
 
     document.querySelector("#insideArcade").style.boxShadow = "none";
+    document.querySelector("#insideArcade").style.maxWidth = "300px";
 
 
     // EMAIL SECTION 
