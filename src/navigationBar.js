@@ -1,6 +1,7 @@
 
 import {renderHomePage} from './homePage.js';
 import {renderMenuPage} from './menu.js';
+import {renderContactPage} from './contact.js';
 
 
 /**
@@ -25,12 +26,14 @@ function navigationBarEventListeners()
 {
     let home = Array.from(document.querySelectorAll(".homePage")); 
     let menu = Array.from(document.querySelectorAll(".menuPage")); 
+    let contact = Array.from(document.querySelectorAll(".contactPage")); 
 
 
     for(let i = 0; i < home.length; i++)
     {
-        home[i].addEventListener('click', renderHomePage); // To add it again once page is cleared
-        menu[i].addEventListener('click', renderMenuPage); // To add it again once page is cleared
+        home[i].addEventListener('click', renderHomePage); 
+        menu[i].addEventListener('click', renderMenuPage); 
+        contact[i].addEventListener('click', renderContactPage);
     }
 }
 

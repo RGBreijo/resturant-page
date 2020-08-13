@@ -180,4 +180,4 @@ function mainPageContent(source)
  }
 
 
-export {renderHomePage};
+export {renderHomePage, createMainImage, mainPageContent, emailSection};
